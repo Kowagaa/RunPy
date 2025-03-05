@@ -4,7 +4,7 @@ ask = input("Type ONE python line of code ")
 run = " "
 file.write(ask)
 run = input("Do yo want to run it? (y or n)? ")
-while:
+while True:
   while run = "n":
     print(" ")
     ask = input("Type ONE python line of code: ")
