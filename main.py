@@ -1,18 +1,10 @@
 import os
-file = open("code.py", "w")
-ask = input("Type ONE python line of code ")
-run = " "
-file.write(ask)
-run = input("Do yo want to run it? (y or n)? ")
-while True:
-  while run == "n":
-    print(" ")
-    ask = input("Type ONE python line of code: ")
-    file.write(ask)
-    run = input("Do yo want to run it? (y or n)? ")
-    os.system("clear")
-  while run == "y":
-    os.system("clear")
+yes_or_no_dict = {"y" : True, "n" : False,}
+def newLine():
+  global yes_or_no_dict
+  if yes_or_no_dict[input("New Line? [y/n] :\n").lower()]:
+    open("code.py", 'w').write(input("Input ONE python line of code: \n"))
+  if yes_or_no_dict[input("Run? [y/n] :\n").lower()]:
     os.system("python code.py")
-    run = input("Do yo want to run it? (y or n)? ")
-
+while newLine() != "exit":
+  os.system("clear")

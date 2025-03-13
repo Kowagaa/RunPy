@@ -1,2 +1,2 @@
 # RunPy
-run in your browser python
+run one python line in your browser
